@@ -12,4 +12,8 @@ This repository contains an example on how to use the `docker-compose` npm libra
 - Type in `docker ps` in the terminal: you should see the container you selected!  
 - Use `docker stop <CONTAINER-ID>` to stop the container you started.
 
+## TODO
 
+- To modify with correct images
+- To test `depends-on` keyword
+- Add GUI
