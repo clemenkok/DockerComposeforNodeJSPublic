@@ -1,5 +1,8 @@
 {
   "devDependencies": {
     "docker-compose": "^0.23.19"
+  },
+  "dependencies": {
+    "amqplib": "^0.10.3"
   }
 }

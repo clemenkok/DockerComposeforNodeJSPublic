@@ -1,11 +1,6 @@
 version: '3'
 services:
-  web:
-    build: .
-    ports:
-      - "5000:5000"
-  db:
-    image: postgres
-    environment:
-      POSTGRES_USER: myuser
-      POSTGRES_PASSWORD: mypassword
+  CardioNIfTI:
+    image: gdoumou/auto_conversion:latest
+  4DSegment2.0:
+    image: 4d_segment-2.0-cuda:latest

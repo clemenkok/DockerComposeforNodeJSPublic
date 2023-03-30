@@ -1,4 +1,3 @@
-
 const compose = require('docker-compose');
 const path = require('path');
 
