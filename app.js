@@ -1,8 +1,8 @@
 const compose = require('docker-compose');
 const path = require('path');
 
-async function startCardioNIfTIContainer() {
-    compose.upOne('CardioNIfTI', { cwd: path.join(__dirname), log: true }).then(
+async function startNodeJsContainer() {
+    compose.upOne('web', { cwd: path.join(__dirname), log: true }).then(
         () => {
           console.log('done')
         },
@@ -12,13 +12,13 @@ async function startCardioNIfTIContainer() {
       )
 }
   
-  if (process.argv.includes('CardioNIfTI')) {
-    startCardioNIfTIContainer();
+  if (process.argv.includes('nodejs')) {
+    startNodeJsContainer();
 }
 
 
-async function start4DSegmentContainer() {
-    compose.upOne('4DSegment2.0', { cwd: path.join(__dirname), log: true }).then(
+async function startPostgreSQLContainer() {
+    compose.upOne('db', { cwd: path.join(__dirname), log: true }).then(
         () => {
           console.log('done')
         },
@@ -28,7 +28,6 @@ async function start4DSegmentContainer() {
       )
 }
   
-  if (process.argv.includes('4dsegment2.0')) {
-    start4DSegmentContainer();
+  if (process.argv.includes('db')) {
+    startPostgreSQLContainer();
 }
-
